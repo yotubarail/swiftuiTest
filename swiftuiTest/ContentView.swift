@@ -14,16 +14,17 @@ struct ContentView: View {
             ZStack {
                         Image("IMG_6599")
                             .resizable()  // サイズの変更を可能にする
-            //                .scaledToFit()
+//                            .scaledToFit()
                             .scaledToFill()
                             .clipped() //scaleToFillのときフレームで切り取る
-                            .frame(maxWidth: 300, maxHeight: 300, alignment: .leading)
+                            .frame(width: 300, height: 300)
                             .clipShape(Circle()) // 円の形にする
                            
                         VStack {
                                     Text("Hello, World!")
                                         // 背景
-                                        .background(Color.blue)
+//                                        .background(Color.blue)
+//                                        .background(Color(red: 0, green: 100, blue: 0, opacity: 0.5))  RGBと透明度
                                         
                                         // 文字の色
                                         .foregroundColor(Color.pink)
@@ -55,7 +56,10 @@ struct ContentView: View {
                                         .padding(.horizontal, 45)
                                         .padding([.leading, .trailing], 45)*/
                             
+                                        // 背景色指定後にpaddingを設定でテキストの周りのみに背景が適用される
                                         .background(Color.white)
+                            
+                            
                                 }
                     }
             // navigationBarのタイトルを設定（displayModeのデフォは.large）
