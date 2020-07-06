@@ -14,6 +14,8 @@
 		5D0D660524AEE84200F2A487 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D660424AEE84200F2A487 /* Assets.xcassets */; };
 		5D0D660824AEE84200F2A487 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D660724AEE84200F2A487 /* Preview Assets.xcassets */; };
 		5D0D660B24AEE84200F2A487 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D0D660924AEE84200F2A487 /* LaunchScreen.storyboard */; };
+		5D0D661724B2E40A00F2A487 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0D661624B2E40A00F2A487 /* ListView.swift */; };
+		5D0D661924B306F500F2A487 /* imageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0D661824B306F500F2A487 /* imageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		5D0D660724AEE84200F2A487 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5D0D660A24AEE84200F2A487 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D0D660C24AEE84200F2A487 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D0D661624B2E40A00F2A487 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		5D0D661824B306F500F2A487 /* imageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				5D0D65FB24AEE83F00F2A487 /* AppDelegate.swift */,
 				5D0D65FD24AEE83F00F2A487 /* SceneDelegate.swift */,
 				5D0D660224AEE83F00F2A487 /* ContentView.swift */,
+				5D0D661624B2E40A00F2A487 /* ListView.swift */,
+				5D0D661824B306F500F2A487 /* imageView.swift */,
 				5D0D660424AEE84200F2A487 /* Assets.xcassets */,
 				5D0D660924AEE84200F2A487 /* LaunchScreen.storyboard */,
 				5D0D660C24AEE84200F2A487 /* Info.plist */,
@@ -151,7 +157,9 @@
 			files = (
 				5D0D65FC24AEE83F00F2A487 /* AppDelegate.swift in Sources */,
 				5D0D660124AEE83F00F2A487 /* swiftuiTest.xcdatamodeld in Sources */,
+				5D0D661724B2E40A00F2A487 /* ListView.swift in Sources */,
 				5D0D660324AEE83F00F2A487 /* ContentView.swift in Sources */,
+				5D0D661924B306F500F2A487 /* imageView.swift in Sources */,
 				5D0D65FE24AEE83F00F2A487 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
