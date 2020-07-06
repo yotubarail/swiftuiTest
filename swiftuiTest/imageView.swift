@@ -12,9 +12,25 @@ struct imageView: View {
     var body: some View {
         Image("IMG_6599")
         .resizable()
-        .scaledToFill()
+        .scaledToFit()
         .frame(width: 300, height: 300)
-        .clipShape(Circle())
+        .clipped()
+           
+           /* 円
+        .clipShape(Circle()) */
+            
+          /* カプセル型
+        .clipShape(Capsule()) */
+            
+           /* 四角形
+        .clipShape(Rectangle()) */
+            
+           /* 楕円
+        .clipShape(Ellipse()) */
+        
+        /* 丸角四角形
+        .clipShape(RoundedRectangle(cornerRadius: 500))
+        .cornerRadius(500)でいい気がする */
     }
 }
 
