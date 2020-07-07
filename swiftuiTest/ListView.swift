@@ -10,7 +10,12 @@ import SwiftUI
 
 struct ListView: View {
     var body: some View {
-        Text("Hello, World!")
+        List {
+            Text("リスト")
+            Text("2行目")
+            Image("logo")
+        }
+        
     }
 }
 
