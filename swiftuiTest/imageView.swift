@@ -28,16 +28,25 @@ struct imageView: View {
            /* 楕円
         .clipShape(Ellipse()) */
         
-        /* 丸角四角形
+        /* 角丸四角形
         .clipShape(RoundedRectangle(cornerRadius: 50))
         .cornerRadius(50)でいい気がする */
         
             /* Imageでmask
+         System Imageでmask
         .mask(
             Image(systemName: "paperplane.fill")
                 .font(.system(size: 150))
                 .frame(width: 0)
-        ) */
+        )
+        
+         Assetsの画像でmask(.frame()は効かない)
+        .mask(
+        Image("logo")
+            .resizable()
+            .scaledToFit()
+        )
+          */
         
             /*Textでmask
         .mask(
