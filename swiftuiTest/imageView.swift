@@ -10,10 +10,10 @@ import SwiftUI
 
 struct imageView: View {
     var body: some View {
-        Image("IMG_6599")
+        Image("IMG_7310")
         .resizable()
-        .scaledToFit()
-        .frame(width: 300, height: 300)
+        .scaledToFill()
+        .frame(width: 350, height: 200)
         .clipped()
            
            /* 円
@@ -29,8 +29,22 @@ struct imageView: View {
         .clipShape(Ellipse()) */
         
         /* 丸角四角形
-        .clipShape(RoundedRectangle(cornerRadius: 500))
-        .cornerRadius(500)でいい気がする */
+        .clipShape(RoundedRectangle(cornerRadius: 50))
+        .cornerRadius(50)でいい気がする */
+        
+            /* Imageでmask
+        .mask(
+            Image(systemName: "paperplane.fill")
+                .font(.system(size: 150))
+                .frame(width: 0)
+        ) */
+        
+            /*Textでmask
+        .mask(
+            Text("SwiftUI")
+                .font(.system(size: 90, weight: .heavy))
+                .frame(width: 0)
+        ) */
     }
 }
 

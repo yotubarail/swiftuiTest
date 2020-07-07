@@ -30,7 +30,7 @@ struct ContentView: View {
                                         .foregroundColor(Color.pink)
                                         
                                         //　文字のサイズ
-                                        .font(Font.system(size: 65))
+                                        .font(.system(size: 65))
                                     Text("下にテキストを置く")
                                         // 全体
                                         .padding(45)
