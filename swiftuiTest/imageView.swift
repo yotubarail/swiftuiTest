@@ -54,6 +54,7 @@ struct imageView: View {
                 .font(.system(size: 90, weight: .heavy))
                 .frame(width: 0)
         ) */
+        .navigationBarTitle("imageView")
     }
 }
 
