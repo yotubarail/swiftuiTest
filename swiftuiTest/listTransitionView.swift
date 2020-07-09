@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+let fruits = ["リンゴ", "みかん", "ぶどう" ,"イチゴ"]
+
 struct listTransitionView: View {
     var body: some View {
         NavigationView {
@@ -15,6 +17,10 @@ struct listTransitionView: View {
                 NavigationLink("ContentViewに遷移", destination: ContentView())
                 NavigationLink("imageViewに遷移", destination: imageView())
                 NavigationLink("ListViewに遷移", destination: ListView())
+                Section(header: Text("配列を使った遷移")) {
+                    NavigationLink(fruits.first!, destination: Text("リンゴの画面"))
+                }
+                NavigationLink(fruits[1], destination: Text("みかんの画面"))
                 .navigationBarTitle("Listで画面遷移", displayMode: .inline)
             }
         }
