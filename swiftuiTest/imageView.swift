@@ -40,10 +40,11 @@ struct imageView: View {
                 .frame(width: 0)
         )
         
-         Assetsの画像でmask(.frame()は効かない)
+         Assetsの画像でmask
         .mask(
         Image("logo")
             .resizable()
+            .frame(width: 100, height: 100, alignment: .trailing)
             .scaledToFit()
         )
           */
