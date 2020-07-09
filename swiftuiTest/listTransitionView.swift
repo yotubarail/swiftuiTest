@@ -16,11 +16,26 @@ struct listTransitionView: View {
             List {
                 NavigationLink("ContentViewに遷移", destination: ContentView())
                 NavigationLink("imageViewに遷移", destination: imageView())
-                NavigationLink("ListViewに遷移", destination: ListView())
+                NavigationLink(destination: ListView()) {
+                    HStack {
+                        Image("logo")
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                        Text("ListViewに遷移")
+                    }
+                }
                 Section(header: Text("配列を使った遷移")) {
                     NavigationLink(fruits.first!, destination: Text("リンゴの画面"))
+                    NavigationLink(fruits[1], destination: Text("みかんの画面"))
+                    NavigationLink(destination: Text("ぶどうの画面")) {
+                        HStack {
+                            Image("logo")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                            Text(fruits[2])
+                        }
+                    }
                 }
-                NavigationLink(fruits[1], destination: Text("みかんの画面"))
                 .navigationBarTitle("Listで画面遷移", displayMode: .inline)
             }
         }

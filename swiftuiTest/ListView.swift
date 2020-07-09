@@ -19,9 +19,7 @@ let number = ["1", "2", "3", "4"]
             HStack() {
                 Image("logo")
                     .resizable()
-                    .scaledToFit()
                     .frame(width: 30, height: 30)
-                    .clipped()
                 Text("画像とテキストを表示")
             }
             Section(header: Text("セクション")){
