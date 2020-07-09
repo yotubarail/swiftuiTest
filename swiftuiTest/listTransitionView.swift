@@ -15,7 +15,7 @@ struct listTransitionView: View {
                 NavigationLink("ContentViewに遷移", destination: ContentView())
                 NavigationLink("imageViewに遷移", destination: imageView())
                 NavigationLink("ListViewに遷移", destination: ListView())
-                    .navigationBarTitle("Listで画面遷移", displayMode: .inline)
+                .navigationBarTitle("Listで画面遷移", displayMode: .inline)
             }
         }
     }
