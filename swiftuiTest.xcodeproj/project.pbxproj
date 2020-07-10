@@ -17,6 +17,7 @@
 		5D0D661724B2E40A00F2A487 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0D661624B2E40A00F2A487 /* ListView.swift */; };
 		5D0D661924B306F500F2A487 /* imageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0D661824B306F500F2A487 /* imageView.swift */; };
 		5D0D661D24B5A96C00F2A487 /* listTransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0D661C24B5A96C00F2A487 /* listTransitionView.swift */; };
+		5D0D662124B8095400F2A487 /* listReplacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0D662024B8095400F2A487 /* listReplacementView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5D0D661624B2E40A00F2A487 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		5D0D661824B306F500F2A487 /* imageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageView.swift; sourceTree = "<group>"; };
 		5D0D661C24B5A96C00F2A487 /* listTransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listTransitionView.swift; sourceTree = "<group>"; };
+		5D0D662024B8095400F2A487 /* listReplacementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listReplacementView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				5D0D65FD24AEE83F00F2A487 /* SceneDelegate.swift */,
 				5D0D660224AEE83F00F2A487 /* ContentView.swift */,
 				5D0D661624B2E40A00F2A487 /* ListView.swift */,
+				5D0D662024B8095400F2A487 /* listReplacementView.swift */,
 				5D0D661824B306F500F2A487 /* imageView.swift */,
 				5D0D661C24B5A96C00F2A487 /* listTransitionView.swift */,
 				5D0D660424AEE84200F2A487 /* Assets.xcassets */,
@@ -161,6 +164,7 @@
 				5D0D65FC24AEE83F00F2A487 /* AppDelegate.swift in Sources */,
 				5D0D660124AEE83F00F2A487 /* swiftuiTest.xcdatamodeld in Sources */,
 				5D0D661724B2E40A00F2A487 /* ListView.swift in Sources */,
+				5D0D662124B8095400F2A487 /* listReplacementView.swift in Sources */,
 				5D0D661D24B5A96C00F2A487 /* listTransitionView.swift in Sources */,
 				5D0D660324AEE83F00F2A487 /* ContentView.swift in Sources */,
 				5D0D661924B306F500F2A487 /* imageView.swift in Sources */,
