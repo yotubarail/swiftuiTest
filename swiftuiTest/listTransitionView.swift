@@ -24,6 +24,7 @@ struct listTransitionView: View {
                         Text("ListViewに遷移")
                     }
                 }
+                NavigationLink("listReplacementViewに遷移", destination: listReplacementView())
                 Section(header: Text("配列を使った遷移")) {
                     NavigationLink(fruits.first!, destination: Text("リンゴの画面"))
                     NavigationLink(fruits[1], destination: Text("みかんの画面"))
