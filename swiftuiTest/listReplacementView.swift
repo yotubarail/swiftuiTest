@@ -13,6 +13,8 @@ struct listReplacementView: View {
     // @Stateの時はprivateをつけるのが推奨されている
     @State private var meats = ["鶏", "豚", "牛"]
     @State private var birds = ["鶏", "鳩", "雉"]
+    @State private var phones = ["iPhone", "ZenFone", "Google Pixel"]
+//    var images: [Image] = [Image("logo"), Image("logo")]
     
     var body: some View {
         NavigationView {
@@ -22,7 +24,7 @@ struct listReplacementView: View {
                     ForEach(meats, id: \.self) { meat in
                         HStack {
                             Text(meat)
-                            } .id(UUID())
+                        } .id(UUID())
                     }
                     .onMove(perform: rowReplace)
                 }
@@ -31,9 +33,19 @@ struct listReplacementView: View {
                     ForEach(birds, id: \.self) { bird in
                         HStack {
                             Text(bird)
-                            } .id(UUID())
+                        } .id(UUID())
                     }
-                .onDelete(perform: rowDelete)
+                    .onDelete(perform: rowDelete)
+                }
+                
+                Section(header: Text("入れ替えも削除も可能なリスト")) {
+                    ForEach(phones, id: \.self) { phone in
+                        HStack {
+                            Text(phone)
+                        } .id(UUID())
+                    }
+                    .onMove(perform: phoneReplace)
+                    .onDelete(perform: phoneDelete)
                 }
             }
             .navigationBarTitle("動作可能なリスト", displayMode: .inline)
@@ -48,6 +60,13 @@ struct listReplacementView: View {
     
     func rowDelete(offsets: IndexSet) {
         birds.remove(atOffsets: offsets)
+    }
+    
+    func phoneReplace(_ from: IndexSet, _ to: Int) {
+        phones.move(fromOffsets: from, toOffset: to)
+    }
+    func phoneDelete(offsets: IndexSet) {
+        phones.remove(atOffsets: offsets)
     }
 }
 
