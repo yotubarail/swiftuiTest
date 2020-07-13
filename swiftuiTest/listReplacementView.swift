@@ -55,7 +55,9 @@ struct listReplacementView: View {
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("動作可能なリスト", displayMode: .inline)
-            .navigationBarItems(trailing: EditButton())
+            .navigationBarItems(leading: Button("Delete") {
+                UserDefaults.standard.removeObject(forKey: "phoneRow")
+            }, trailing: EditButton())
         }
         // View表示の時にUserDefaultsからデータを呼び出す
         .onAppear() {
