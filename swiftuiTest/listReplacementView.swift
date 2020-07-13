@@ -52,11 +52,17 @@ struct listReplacementView: View {
                     .onMove(perform: phoneReplace)
                     .onDelete(perform: phoneDelete)
                 }
-                
-                
             }
+            .listStyle(GroupedListStyle())
             .navigationBarTitle("動作可能なリスト", displayMode: .inline)
             .navigationBarItems(trailing: EditButton())
+        }
+        // View表示の時にUserDefaultsからデータを呼び出す
+        .onAppear() {
+            guard let phoneItem = UserDefaults.standard.array(forKey: "phoneRow") as? [String] else {
+                return
+            }
+            self.phones = phoneItem
         }
     }
     
@@ -73,9 +79,12 @@ struct listReplacementView: View {
     // 入れ替えも削除も可能なリスト
     func phoneReplace(_ from: IndexSet, _ to: Int) {
         phones.move(fromOffsets: from, toOffset: to)
+        // UserDefaultsにデータを保存
+        UserDefaults.standard.set(phones, forKey: "phoneRow")
     }
     func phoneDelete(offsets: IndexSet) {
         phones.remove(atOffsets: offsets)
+        UserDefaults.standard.set(phones, forKey: "phoneRow")
     }
 }
 
