@@ -37,8 +37,8 @@ struct listTransitionView: View {
                         }
                     }
                 }
-                .navigationBarTitle("Listで画面遷移", displayMode: .inline)
             }
+            .navigationBarTitle("Listで画面遷移", displayMode: .inline)
         }
     }
 }
