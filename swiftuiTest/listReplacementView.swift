@@ -24,7 +24,6 @@ struct listReplacementView: View {
                         HStack {
                             Text(meat)
                         }
-                        .id(UUID())
                     }
                     .onMove(perform: rowReplace)
                 }
@@ -34,7 +33,6 @@ struct listReplacementView: View {
                         HStack {
                             Text(bird)
                         }
-                        .id(UUID())
                     }
                     .onDelete(perform: rowDelete)
                 }
@@ -47,7 +45,6 @@ struct listReplacementView: View {
                                 .frame(width: 20, height: 20)
                             Text(phone)
                         }
-                        .id(UUID())
                     }
                     .onMove(perform: phoneReplace)
                     .onDelete(perform: phoneDelete)
