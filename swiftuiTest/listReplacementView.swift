@@ -23,7 +23,7 @@ struct listReplacementView: View {
                     ForEach(meats, id: \.self) { meat in
                         HStack {
                             Text(meat)
-                        }
+                        }.id(UUID())
                     }
                     .onMove(perform: rowReplace)
                 }
@@ -44,7 +44,7 @@ struct listReplacementView: View {
                                 .resizable()
                                 .frame(width: 20, height: 20)
                             Text(phone)
-                        }
+                        }.id(UUID())
                     }
                     .onMove(perform: phoneReplace)
                     .onDelete(perform: phoneDelete)
