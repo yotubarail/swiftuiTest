@@ -30,28 +30,39 @@ struct listUserDefaultsView: View {
         .navigationBarTitle("UserDefaultsを用いたリスト", displayMode: .inline)
         .navigationBarItems(leading: Button("データ消去") {
             self.useList.userDefaultsRemove()
-            print("aaa")
         },trailing: EditButton())
+        .onAppear() {
+            guard let phoneItem = UserDefaults.standard.array(forKey: "phoneKey") as? [String] else {
+                return
+            }
+            self.useList.phones = phoneItem
+        }
     }
 }
 
 class useUserDefaults: ObservableObject {
-    @Published public var phones = ["iPhone", "ZenFone", "Google Pixel"]
+    
+    let key = "phoneKey"
+    let defaults = UserDefaults.standard
+    
+    @Published var phones = ["iPhone", "ZenFone", "Google Pixel"]
     
     func phoneReplace(_ from: IndexSet, _ to: Int) {
         phones.move(fromOffsets: from, toOffset: to)
-        UserDefaults.standard.set(phones, forKey: "phoneRow")
+        defaults.set(phones, forKey: key)
     }
-    
+
     func phoneDelete(offsets: IndexSet) {
         phones.remove(atOffsets: offsets)
-        UserDefaults.standard.set(phones, forKey: "phoneRow")
+        defaults.set(phones, forKey: key)
     }
     
     func userDefaultsRemove() {
-        UserDefaults.standard.removeObject(forKey: "phoneRow")
+        defaults.removeObject(forKey: key)
+        
     }
 
+    
 }
 
 struct listUserDefaultsView_Previews: PreviewProvider {
