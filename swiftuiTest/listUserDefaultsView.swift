@@ -10,7 +10,7 @@ import SwiftUI
 
 struct listUserDefaultsView: View {
     
-    @ObservedObject var useList = useUserDefaults()
+    @ObservedObject var useList = UseUserDefaults()
           
     var body: some View {
         List {
@@ -41,7 +41,7 @@ struct listUserDefaultsView: View {
     }
 }
 
-class useUserDefaults: ObservableObject {
+class UseUserDefaults: ObservableObject {
     
     let key = "phoneKey"
     let defaults = UserDefaults.standard
