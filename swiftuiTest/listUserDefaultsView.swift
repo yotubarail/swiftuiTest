@@ -42,20 +42,20 @@ struct listUserDefaultsView: View {
 }
 
 class UseUserDefaults: ObservableObject {
-    
+
     let key = "phoneKey"
     let defaults = UserDefaults.standard
-    
+
     let register: Void = UserDefaults.standard.register(defaults: ["phoneKey": ["iPhone", "ZenFone", "Google Pixel"]])
 
 
     @Published var userdefaults = UserDefaults.standard.stringArray(forKey: "phoneKey")
-    
+
     func plus() {
         userdefaults! += ["DS"]
         defaults.set(userdefaults!, forKey: key)
     }
-    
+
     func phoneReplace(_ from: IndexSet, _ to: Int) {
         userdefaults!.move(fromOffsets: from, toOffset: to)
         defaults.set(userdefaults!, forKey: key)
@@ -65,7 +65,7 @@ class UseUserDefaults: ObservableObject {
         userdefaults!.remove(atOffsets: offsets)
         defaults.set(userdefaults!, forKey: key)
     }
-    
+
     func userDefaultsRemove() {
         defaults.removeObject(forKey: key)
         guard let phoneItem = defaults.stringArray(forKey: key) else {
@@ -76,6 +76,34 @@ class UseUserDefaults: ObservableObject {
 
 
 }
+
+/* 配列をUserDefaultsの初期値として登録しない時のclassだが、消すと元の配列は表示できない
+ View内のuserDefaults!をphonesに変え、List内のButtonをコメントアウトすること */
+
+/* class UseUserDefaults: ObservableObject {
+
+    let key = "phoneRow"
+    let defaults = UserDefaults.standard
+
+    @Published var phones = ["iPhone", "ZenFone", "Google Pixel"]
+
+    func phoneReplace(_ from: IndexSet, _ to: Int) {
+        phones.move(fromOffsets: from, toOffset: to)
+        defaults.set(phones, forKey: key)
+    }
+
+    func phoneDelete(offsets: IndexSet) {
+        phones.remove(atOffsets: offsets)
+        defaults.set(phones, forKey: key)
+    }
+
+    func userDefaultsRemove() {
+        defaults.removeObject(forKey: key)
+        phones.removeAll()
+    }
+
+} */
+
 
 struct listUserDefaultsView_Previews: PreviewProvider {
     static var previews: some View {
