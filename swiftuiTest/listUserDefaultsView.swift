@@ -15,7 +15,7 @@ struct listUserDefaultsView: View {
     var body: some View {
         List {
             Section(header: Text("入れ替えも削除も可能なリスト")) {
-                ForEach(useList.phones, id: \.self) { phone in
+                ForEach(useList.userdefaults!, id: \.self) { phone in
                     HStack {
                         Image("logo")
                             .resizable()
@@ -26,6 +26,7 @@ struct listUserDefaultsView: View {
                 .onMove(perform: useList.phoneReplace)
                 .onDelete(perform: useList.phoneDelete)
             }
+            Button("付け足す", action: useList.plus)
         }
         .navigationBarTitle("UserDefaultsを用いたリスト", displayMode: .inline)
         .navigationBarItems(leading: Button("データ消去") {
@@ -35,7 +36,7 @@ struct listUserDefaultsView: View {
             guard let phoneItem = UserDefaults.standard.array(forKey: "phoneKey") as? [String] else {
                 return
             }
-            self.useList.phones = phoneItem
+            self.useList.userdefaults! = phoneItem
         }
     }
 }
@@ -45,24 +46,35 @@ class useUserDefaults: ObservableObject {
     let key = "phoneKey"
     let defaults = UserDefaults.standard
     
-    @Published var phones = ["iPhone", "ZenFone", "Google Pixel"]
+    let register: Void = UserDefaults.standard.register(defaults: ["phoneKey": ["iPhone", "ZenFone", "Google Pixel"]])
+
+
+    @Published var userdefaults = UserDefaults.standard.stringArray(forKey: "phoneKey")
+    
+    func plus() {
+        userdefaults! += ["DS"]
+        defaults.set(userdefaults!, forKey: key)
+    }
     
     func phoneReplace(_ from: IndexSet, _ to: Int) {
-        phones.move(fromOffsets: from, toOffset: to)
-        defaults.set(phones, forKey: key)
+        userdefaults!.move(fromOffsets: from, toOffset: to)
+        defaults.set(userdefaults!, forKey: key)
     }
 
     func phoneDelete(offsets: IndexSet) {
-        phones.remove(atOffsets: offsets)
-        defaults.set(phones, forKey: key)
+        userdefaults!.remove(atOffsets: offsets)
+        defaults.set(userdefaults!, forKey: key)
     }
     
     func userDefaultsRemove() {
         defaults.removeObject(forKey: key)
-        
+        guard let phoneItem = defaults.stringArray(forKey: key) else {
+            return
+        }
+        self.userdefaults! = phoneItem
     }
 
-    
+
 }
 
 struct listUserDefaultsView_Previews: PreviewProvider {
