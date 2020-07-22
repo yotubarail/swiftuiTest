@@ -58,10 +58,18 @@ class UseUserDefaults: ObservableObject {
     let key = "phoneKey"
     let defaults = UserDefaults.standard
 
-    let register: Void = UserDefaults.standard.register(defaults: ["phoneKey": ["iPhone", "ZenFone", "Google Pixel"]])
-
-
+//    let register: Void = UserDefaults.standard.register(defaults: ["phoneKey": ["iPhone", "ZenFone", "Google Pixel"]])
+    
     @Published var userdefaults = UserDefaults.standard.stringArray(forKey: "phoneKey")
+
+    init() {
+        defaults.register(defaults: ["phoneKey": ["iPhone", "ZenFone", "Google Pixel"]])
+         loadUserDefaults()
+    }
+
+    private func loadUserDefaults() {
+        userdefaults = defaults.stringArray(forKey: key)
+    }
 
     func phoneReplace(_ from: IndexSet, _ to: Int) {
         userdefaults!.move(fromOffsets: from, toOffset: to)
