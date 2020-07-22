@@ -11,6 +11,7 @@ import SwiftUI
 struct listUserDefaultsView: View {
     
     @ObservedObject var useList = UseUserDefaults()
+    @State var addPhone = ""
           
     var body: some View {
         List {
@@ -26,7 +27,13 @@ struct listUserDefaultsView: View {
                 .onMove(perform: useList.phoneReplace)
                 .onDelete(perform: useList.phoneDelete)
             }
-            Button("付け足す", action: useList.plus)
+            TextField("テキストを入力", text: $addPhone,
+            onCommit: {
+                self.plusPhone()
+                self.addPhone = ""
+                
+            })
+                .textFieldStyle(RoundedBorderTextFieldStyle())
         }
         .navigationBarTitle("UserDefaultsを用いたリスト", displayMode: .inline)
         .navigationBarItems(leading: Button("データ消去") {
@@ -39,6 +46,11 @@ struct listUserDefaultsView: View {
             self.useList.userdefaults! = phoneItem
         }
     }
+    
+    func plusPhone() {
+        useList.userdefaults! += [addPhone]
+        useList.defaults.set(useList.userdefaults!, forKey: useList.key)
+    }
 }
 
 class UseUserDefaults: ObservableObject {
@@ -50,11 +62,6 @@ class UseUserDefaults: ObservableObject {
 
 
     @Published var userdefaults = UserDefaults.standard.stringArray(forKey: "phoneKey")
-
-    func plus() {
-        userdefaults! += ["DS"]
-        defaults.set(userdefaults!, forKey: key)
-    }
 
     func phoneReplace(_ from: IndexSet, _ to: Int) {
         userdefaults!.move(fromOffsets: from, toOffset: to)
