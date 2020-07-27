@@ -21,6 +21,11 @@
 		5D69FA0924C14B83005C16C7 /* listUserDefaultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA0824C14B83005C16C7 /* listUserDefaultsView.swift */; };
 		5D69FA0F24C8171C005C16C7 /* BasicRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA0E24C8171B005C16C7 /* BasicRowView.swift */; };
 		5D69FA1124C8173A005C16C7 /* BasicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA1024C8173A005C16C7 /* BasicListView.swift */; };
+		5D69FA1424CE5F2A005C16C7 /* connpassRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA1324CE5F2A005C16C7 /* connpassRowView.swift */; };
+		5D69FA1624CE6219005C16C7 /* connpassListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA1524CE6219005C16C7 /* connpassListView.swift */; };
+		5D69FA1824CE708D005C16C7 /* StudyGroupEventFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA1724CE708D005C16C7 /* StudyGroupEventFetcher.swift */; };
+		5D69FA1A24CE9125005C16C7 /* StudyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA1924CE9125005C16C7 /* StudyGroup.swift */; };
+		5D69FA1C24CE919F005C16C7 /* connpassEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA1B24CE919F005C16C7 /* connpassEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		5D69FA0824C14B83005C16C7 /* listUserDefaultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listUserDefaultsView.swift; sourceTree = "<group>"; };
 		5D69FA0E24C8171B005C16C7 /* BasicRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRowView.swift; sourceTree = "<group>"; };
 		5D69FA1024C8173A005C16C7 /* BasicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicListView.swift; sourceTree = "<group>"; };
+		5D69FA1324CE5F2A005C16C7 /* connpassRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connpassRowView.swift; sourceTree = "<group>"; };
+		5D69FA1524CE6219005C16C7 /* connpassListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connpassListView.swift; sourceTree = "<group>"; };
+		5D69FA1724CE708D005C16C7 /* StudyGroupEventFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupEventFetcher.swift; sourceTree = "<group>"; };
+		5D69FA1924CE9125005C16C7 /* StudyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroup.swift; sourceTree = "<group>"; };
+		5D69FA1B24CE919F005C16C7 /* connpassEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connpassEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,7 @@
 				5D0D661824B306F500F2A487 /* imageView.swift */,
 				5D0D661C24B5A96C00F2A487 /* listTransitionView.swift */,
 				5D69FA0D24C815CF005C16C7 /* BasicList */,
+				5D69FA1224CE5EFE005C16C7 /* connpassList */,
 				5D0D660424AEE84200F2A487 /* Assets.xcassets */,
 				5D0D660924AEE84200F2A487 /* LaunchScreen.storyboard */,
 				5D0D660C24AEE84200F2A487 /* Info.plist */,
@@ -105,6 +116,18 @@
 				5D69FA1024C8173A005C16C7 /* BasicListView.swift */,
 			);
 			path = BasicList;
+			sourceTree = "<group>";
+		};
+		5D69FA1224CE5EFE005C16C7 /* connpassList */ = {
+			isa = PBXGroup;
+			children = (
+				5D69FA1324CE5F2A005C16C7 /* connpassRowView.swift */,
+				5D69FA1524CE6219005C16C7 /* connpassListView.swift */,
+				5D69FA1724CE708D005C16C7 /* StudyGroupEventFetcher.swift */,
+				5D69FA1924CE9125005C16C7 /* StudyGroup.swift */,
+				5D69FA1B24CE919F005C16C7 /* connpassEvent.swift */,
+			);
+			path = connpassList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D69FA1A24CE9125005C16C7 /* StudyGroup.swift in Sources */,
+				5D69FA1424CE5F2A005C16C7 /* connpassRowView.swift in Sources */,
 				5D69FA1124C8173A005C16C7 /* BasicListView.swift in Sources */,
 				5D0D65FC24AEE83F00F2A487 /* AppDelegate.swift in Sources */,
 				5D0D660124AEE83F00F2A487 /* swiftuiTest.xcdatamodeld in Sources */,
@@ -185,7 +210,10 @@
 				5D0D662124B8095400F2A487 /* listReplacementView.swift in Sources */,
 				5D0D661D24B5A96C00F2A487 /* listTransitionView.swift in Sources */,
 				5D0D660324AEE83F00F2A487 /* ContentView.swift in Sources */,
+				5D69FA1824CE708D005C16C7 /* StudyGroupEventFetcher.swift in Sources */,
 				5D69FA0F24C8171C005C16C7 /* BasicRowView.swift in Sources */,
+				5D69FA1624CE6219005C16C7 /* connpassListView.swift in Sources */,
+				5D69FA1C24CE919F005C16C7 /* connpassEvent.swift in Sources */,
 				5D0D661924B306F500F2A487 /* imageView.swift in Sources */,
 				5D69FA0924C14B83005C16C7 /* listUserDefaultsView.swift in Sources */,
 				5D0D65FE24AEE83F00F2A487 /* SceneDelegate.swift in Sources */,
