@@ -13,15 +13,17 @@ struct Event: Decodable,Identifiable {
     var title: String
     var date: String
     var place: String
-//    var people: Int
+    var people: Int
 //    var limit: Int
+    var url: String
     
     enum CodingKeys: String, CodingKey {
         case id = "event_id"
         case title = "title"
         case date = "started_at"
         case place = "place"
-//        case people = "accepted"
+        case people = "accepted"
 //        case limit = "limit"
+        case url = "event_url"
     }
 }

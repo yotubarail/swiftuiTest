@@ -7,29 +7,52 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct connpassRowView: View {
     
     var eventData: Event
-    let formatter = ISO8601DateFormatter()
 
     var body: some View {
         
         HStack {
-            Text(eventData.date)
             VStack(alignment: .leading) {
                 Text(eventData.title)
-                    .font(.system(size: 25))
+                    .font(.system(size: 20))
                     .padding(.bottom,20)
-                Text(eventData.place)
+                HStack {
+                    Image(systemName: "mappin.and.ellipse")
+                        .foregroundColor(Color.red)
+                    Text(eventData.place)
                     .font(.system(size: 15))
+                }
             }
             Spacer()
-//            VStack(alignment: .leading) {
-//                Text("参加:" + String(eventData.people))
-//                Text("定員:" + String(eventData.limit))
-//            }
+            VStack(alignment: .trailing) {
+                Spacer()
+                Text(EventDateFormatter.StringToDate(dateString: eventData.date, isOnlyDate: false))
+                Spacer()
+                Text("参加:" + String(eventData.people) + "人")
+//                Text("定員:" + String(eventData.limit) + "人")
+                Spacer()
+            }
         }
+    }
+}
+
+final class EventDateFormatter: DateFormatter {
+    class func StringToDate(dateString: String, isOnlyDate: Bool) -> String {
+        let formatter = ISO8601DateFormatter()
+        let date = formatter.date(from: dateString)
+        return DateToString(date: date!, isOnlyDate: isOnlyDate)
+    }
+    
+    class func DateToString(date: Date, isOnlyDate: Bool) -> String {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        formatter.locale = Locale(identifier: "ja_JP")
+        formatter.setLocalizedDateFormatFromTemplate("Mdk")
+        return formatter.string(from: date)
     }
 }
 

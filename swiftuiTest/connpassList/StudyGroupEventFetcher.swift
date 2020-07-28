@@ -10,7 +10,7 @@ import Foundation
 
 class StudyGroupEventFetcher: ObservableObject {
 
-    private let urlLink = "https://connpass.com/api/v1/event/?keyword=swift"
+    private let urlLink = "https://connpass.com/api/v1/event/?keyword=swift&order=2&count=25"
     
     @Published var eventData: [Event] = []
 
@@ -19,8 +19,10 @@ class StudyGroupEventFetcher: ObservableObject {
     }
 
     func fetchEventData() {
-        URLSession.shared.dataTask(with: URL(string: urlLink)!) { (data, response, error) in
-            guard let data = data else { return }
+        URLSession.shared.dataTask(with: URL(string: urlLink)!) { data, response, error in
+            guard let data = data else {
+                return
+            }
             let decoder: JSONDecoder = JSONDecoder()
             do {
                 let searchedResultData = try decoder.decode(StudyGroup.self, from: data)
@@ -28,7 +30,7 @@ class StudyGroupEventFetcher: ObservableObject {
                     self.eventData = searchedResultData.events.reversed()
                 }
             } catch {
-                print("json convert failed in JSONDecoder. " + error.localizedDescription)
+                print(error.localizedDescription)
             }
         }.resume()
     }
