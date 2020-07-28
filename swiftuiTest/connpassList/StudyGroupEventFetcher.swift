@@ -10,7 +10,7 @@ import Foundation
 
 class StudyGroupEventFetcher: ObservableObject {
 
-    private let urlLink = "https://connpass.com/api/v1/event/?keyword=swift&order=2&count=20"
+    private let urlLink = "https://connpass.com/api/v1/event/?keyword=swift&order=2&count=25"
     
     @Published var eventData: [Event] = []
 

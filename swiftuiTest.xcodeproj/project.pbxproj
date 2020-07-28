@@ -26,6 +26,7 @@
 		5D69FA1824CE708D005C16C7 /* StudyGroupEventFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA1724CE708D005C16C7 /* StudyGroupEventFetcher.swift */; };
 		5D69FA1A24CE9125005C16C7 /* StudyGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA1924CE9125005C16C7 /* StudyGroup.swift */; };
 		5D69FA1C24CE919F005C16C7 /* connpassEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA1B24CE919F005C16C7 /* connpassEvent.swift */; };
+		5D69FA1E24CFDED4005C16C7 /* connpassWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D69FA1D24CFDED3005C16C7 /* connpassWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		5D69FA1724CE708D005C16C7 /* StudyGroupEventFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroupEventFetcher.swift; sourceTree = "<group>"; };
 		5D69FA1924CE9125005C16C7 /* StudyGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyGroup.swift; sourceTree = "<group>"; };
 		5D69FA1B24CE919F005C16C7 /* connpassEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connpassEvent.swift; sourceTree = "<group>"; };
+		5D69FA1D24CFDED3005C16C7 /* connpassWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = connpassWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				5D69FA1724CE708D005C16C7 /* StudyGroupEventFetcher.swift */,
 				5D69FA1924CE9125005C16C7 /* StudyGroup.swift */,
 				5D69FA1B24CE919F005C16C7 /* connpassEvent.swift */,
+				5D69FA1D24CFDED3005C16C7 /* connpassWebView.swift */,
 			);
 			path = connpassList;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				5D69FA1124C8173A005C16C7 /* BasicListView.swift in Sources */,
 				5D0D65FC24AEE83F00F2A487 /* AppDelegate.swift in Sources */,
 				5D0D660124AEE83F00F2A487 /* swiftuiTest.xcdatamodeld in Sources */,
+				5D69FA1E24CFDED4005C16C7 /* connpassWebView.swift in Sources */,
 				5D0D661724B2E40A00F2A487 /* ListView.swift in Sources */,
 				5D0D662124B8095400F2A487 /* listReplacementView.swift in Sources */,
 				5D0D661D24B5A96C00F2A487 /* listTransitionView.swift in Sources */,

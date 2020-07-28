@@ -19,7 +19,7 @@ let mockEventsData: [Event]
          place: "東京都足立区",
          people: 15,/*
          limit: 100*/
-         url: ""),
+         url: "https://st2121.web.fc2.com"),
    Event(id: 2,
          title: "Swiftおべんつよかい",
          date: "6/24\n19:00",

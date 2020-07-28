@@ -15,8 +15,11 @@ struct connpassListView: View {
     
     var body: some View {
         List(fetcher.eventData) { event in
-            connpassRowView(eventData: event)
+            NavigationLink(destination: connpassWebView(eventData: event)){
+                connpassRowView(eventData: event)
+            }
         }
+    .navigationBarTitle("connpass検索結果")
     }
 }
 

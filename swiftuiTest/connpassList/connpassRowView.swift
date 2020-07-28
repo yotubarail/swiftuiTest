@@ -49,7 +49,6 @@ final class EventDateFormatter: DateFormatter {
     
     class func DateToString(date: Date, isOnlyDate: Bool) -> String {
         let formatter = DateFormatter()
-        formatter.dateStyle = isOnlyDate ? .none: .short
         formatter.timeStyle = .short
         formatter.locale = Locale(identifier: "ja_JP")
         formatter.setLocalizedDateFormatFromTemplate("Mdk")
