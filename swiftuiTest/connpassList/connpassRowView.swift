@@ -7,16 +7,15 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct connpassRowView: View {
     
     var eventData: Event
-    let formatter = ISO8601DateFormatter()
 
     var body: some View {
         
         HStack {
-            Text(eventData.date)
             VStack(alignment: .leading) {
                 Text(eventData.title)
                     .font(.system(size: 20))
@@ -29,11 +28,32 @@ struct connpassRowView: View {
                 }
             }
             Spacer()
-            VStack(alignment: .leading) {
+            VStack(alignment: .trailing) {
+                Spacer()
+                Text(EventDateFormatter.StringToDate(dateString: eventData.date, isOnlyDate: false))
+                Spacer()
                 Text("参加:" + String(eventData.people) + "人")
-//                Text("定員:" + String(eventData.limit))
+//                Text("定員:" + String(eventData.limit) + "人")
+                Spacer()
             }
         }
+    }
+}
+
+final class EventDateFormatter: DateFormatter {
+    class func StringToDate(dateString: String, isOnlyDate: Bool) -> String {
+        let formatter = ISO8601DateFormatter()
+        let date = formatter.date(from: dateString)
+        return DateToString(date: date!, isOnlyDate: isOnlyDate)
+    }
+    
+    class func DateToString(date: Date, isOnlyDate: Bool) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = isOnlyDate ? .none: .short
+        formatter.timeStyle = .short
+        formatter.locale = Locale(identifier: "ja_JP")
+        formatter.setLocalizedDateFormatFromTemplate("Mdk")
+        return formatter.string(from: date)
     }
 }
 
