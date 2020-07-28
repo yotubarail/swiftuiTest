@@ -14,7 +14,7 @@ struct Event: Decodable,Identifiable {
     var date: String
     var place: String
     var people: Int
-//    var limit: Int
+    var limit: Int!
     var url: String
     
     enum CodingKeys: String, CodingKey {
@@ -23,7 +23,7 @@ struct Event: Decodable,Identifiable {
         case date = "started_at"
         case place = "place"
         case people = "accepted"
-//        case limit = "limit"
+        case limit = "limit"
         case url = "event_url"
     }
 }

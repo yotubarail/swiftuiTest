@@ -33,7 +33,7 @@ struct connpassRowView: View {
                 Text(EventDateFormatter.StringToDate(dateString: eventData.date, isOnlyDate: false))
                 Spacer()
                 Text("参加:" + String(eventData.people) + "人")
-//                Text("定員:" + String(eventData.limit) + "人")
+                Text("定員:" + String((eventData.limit ?? 0)) + "人")
                 Spacer()
             }
         }
