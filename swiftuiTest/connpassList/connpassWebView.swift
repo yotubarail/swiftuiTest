@@ -15,6 +15,7 @@ struct connpassWebView: View {
     
     var body: some View {
         SafariView(url: URL(string: eventData.url)!)
+            .edgesIgnoringSafeArea(.bottom)
         .navigationBarTitle(eventData.title)
     }
 }

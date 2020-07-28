@@ -10,13 +10,23 @@ import SwiftUI
 
 struct connpassListView: View {
     
+    @State var showModal = false
+    
 //    let events: [Event] = mockEventsData
      @ObservedObject var fetcher = StudyGroupEventFetcher()
     
     var body: some View {
         List(fetcher.eventData) { event in
-            NavigationLink(destination: connpassWebView(eventData: event)){
+//            NavigationLink(destination: connpassWebView(eventData: event)){
+//                connpassRowView(eventData: event)
+//            }
+            Button(action: {
+                self.showModal.toggle()
+            }) {
                 connpassRowView(eventData: event)
+            }
+            .sheet(isPresented: self.$showModal) {
+                connpassWebView(eventData: event)
             }
         }
     .navigationBarTitle("connpass検索結果")
