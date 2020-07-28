@@ -19,16 +19,20 @@ struct connpassRowView: View {
             Text(eventData.date)
             VStack(alignment: .leading) {
                 Text(eventData.title)
-                    .font(.system(size: 25))
+                    .font(.system(size: 20))
                     .padding(.bottom,20)
-                Text(eventData.place)
+                HStack {
+                    Image(systemName: "mappin.and.ellipse")
+                        .foregroundColor(Color.red)
+                    Text(eventData.place)
                     .font(.system(size: 15))
+                }
             }
             Spacer()
-//            VStack(alignment: .leading) {
-//                Text("参加:" + String(eventData.people))
+            VStack(alignment: .leading) {
+                Text("参加:" + String(eventData.people) + "人")
 //                Text("定員:" + String(eventData.limit))
-//            }
+            }
         }
     }
 }
