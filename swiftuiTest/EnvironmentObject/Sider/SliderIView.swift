@@ -9,13 +9,15 @@
 import SwiftUI
 
 struct SliderIView: View {
+    @EnvironmentObject var observableValues: ObservableValues
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Slider(value: $observableValues.numerics, in: 0...400)
+            .padding(.horizontal, 30)
     }
 }
 
 struct SliderIView_Previews: PreviewProvider {
     static var previews: some View {
-        SliderIView()
+        SliderIView().environmentObject(ObservableValues())
     }
 }

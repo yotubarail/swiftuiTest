@@ -9,13 +9,14 @@
 import SwiftUI
 
 struct NumericsTextView: View {
+    @EnvironmentObject var observableValues: ObservableValues
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("\(observableValues.numerics)")
     }
 }
 
 struct NumericsTextView_Previews: PreviewProvider {
     static var previews: some View {
-        NumericsTextView()
+        NumericsTextView().environmentObject(ObservableValues())
     }
 }

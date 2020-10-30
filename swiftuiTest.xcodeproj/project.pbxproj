@@ -30,6 +30,10 @@
 		5DDFA70D254BCA0500FCF670 /* ObservableValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDFA70C254BCA0500FCF670 /* ObservableValues.swift */; };
 		5DDFA710254BCC0800FCF670 /* SliderIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDFA70F254BCC0800FCF670 /* SliderIView.swift */; };
 		5DDFA713254BCC3900FCF670 /* NumericsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDFA712254BCC3900FCF670 /* NumericsTextView.swift */; };
+		5DDFA718254BD08C00FCF670 /* EnvironmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDFA717254BD08C00FCF670 /* EnvironmentView.swift */; };
+		5DDFA71D254BDC8A00FCF670 /* ObservableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDFA71C254BDC8A00FCF670 /* ObservableText.swift */; };
+		5DDFA721254BF38100FCF670 /* VarTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDFA720254BF38100FCF670 /* VarTextView.swift */; };
+		5DDFA724254BF39F00FCF670 /* EnterTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDFA723254BF39F00FCF670 /* EnterTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +62,10 @@
 		5DDFA70C254BCA0500FCF670 /* ObservableValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableValues.swift; sourceTree = "<group>"; };
 		5DDFA70F254BCC0800FCF670 /* SliderIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderIView.swift; sourceTree = "<group>"; };
 		5DDFA712254BCC3900FCF670 /* NumericsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericsTextView.swift; sourceTree = "<group>"; };
+		5DDFA717254BD08C00FCF670 /* EnvironmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentView.swift; sourceTree = "<group>"; };
+		5DDFA71C254BDC8A00FCF670 /* ObservableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableText.swift; sourceTree = "<group>"; };
+		5DDFA720254BF38100FCF670 /* VarTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarTextView.swift; sourceTree = "<group>"; };
+		5DDFA723254BF39F00FCF670 /* EnterTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,11 +151,31 @@
 		5DDFA70A254BC28C00FCF670 /* EnvironmentObject */ = {
 			isa = PBXGroup;
 			children = (
+				5DDFA71B254BD92900FCF670 /* Text */,
+				5DDFA71A254BD8E900FCF670 /* Sider */,
+				5DDFA717254BD08C00FCF670 /* EnvironmentView.swift */,
+			);
+			path = EnvironmentObject;
+			sourceTree = "<group>";
+		};
+		5DDFA71A254BD8E900FCF670 /* Sider */ = {
+			isa = PBXGroup;
+			children = (
 				5DDFA70C254BCA0500FCF670 /* ObservableValues.swift */,
 				5DDFA70F254BCC0800FCF670 /* SliderIView.swift */,
 				5DDFA712254BCC3900FCF670 /* NumericsTextView.swift */,
 			);
-			path = EnvironmentObject;
+			path = Sider;
+			sourceTree = "<group>";
+		};
+		5DDFA71B254BD92900FCF670 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				5DDFA71C254BDC8A00FCF670 /* ObservableText.swift */,
+				5DDFA723254BF39F00FCF670 /* EnterTextView.swift */,
+				5DDFA720254BF38100FCF670 /* VarTextView.swift */,
+			);
+			path = Text;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,7 +253,9 @@
 				5D69FA1424CE5F2A005C16C7 /* connpassRowView.swift in Sources */,
 				5DDFA710254BCC0800FCF670 /* SliderIView.swift in Sources */,
 				5D69FA1124C8173A005C16C7 /* BasicListView.swift in Sources */,
+				5DDFA724254BF39F00FCF670 /* EnterTextView.swift in Sources */,
 				5D0D65FC24AEE83F00F2A487 /* AppDelegate.swift in Sources */,
+				5DDFA71D254BDC8A00FCF670 /* ObservableText.swift in Sources */,
 				5DDFA70D254BCA0500FCF670 /* ObservableValues.swift in Sources */,
 				5D0D660124AEE83F00F2A487 /* swiftuiTest.xcdatamodeld in Sources */,
 				5DDFA713254BCC3900FCF670 /* NumericsTextView.swift in Sources */,
@@ -237,8 +267,10 @@
 				5D69FA1824CE708D005C16C7 /* StudyGroupEventFetcher.swift in Sources */,
 				5D69FA0F24C8171C005C16C7 /* BasicRowView.swift in Sources */,
 				5D69FA1624CE6219005C16C7 /* connpassListView.swift in Sources */,
+				5DDFA718254BD08C00FCF670 /* EnvironmentView.swift in Sources */,
 				5D69FA1C24CE919F005C16C7 /* connpassEvent.swift in Sources */,
 				5D0D661924B306F500F2A487 /* imageView.swift in Sources */,
+				5DDFA721254BF38100FCF670 /* VarTextView.swift in Sources */,
 				5D69FA0924C14B83005C16C7 /* listUserDefaultsView.swift in Sources */,
 				5D0D65FE24AEE83F00F2A487 /* SceneDelegate.swift in Sources */,
 			);
