@@ -34,6 +34,7 @@
 		5DDFA71D254BDC8A00FCF670 /* ObservableText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDFA71C254BDC8A00FCF670 /* ObservableText.swift */; };
 		5DDFA721254BF38100FCF670 /* VarTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDFA720254BF38100FCF670 /* VarTextView.swift */; };
 		5DDFA724254BF39F00FCF670 /* EnterTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDFA723254BF39F00FCF670 /* EnterTextView.swift */; };
+		5DDFA7342553921B00FCF670 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDFA7332553921B00FCF670 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		5DDFA71C254BDC8A00FCF670 /* ObservableText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableText.swift; sourceTree = "<group>"; };
 		5DDFA720254BF38100FCF670 /* VarTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarTextView.swift; sourceTree = "<group>"; };
 		5DDFA723254BF39F00FCF670 /* EnterTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterTextView.swift; sourceTree = "<group>"; };
+		5DDFA7332553921B00FCF670 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				5D69FA0824C14B83005C16C7 /* listUserDefaultsView.swift */,
 				5D0D661824B306F500F2A487 /* imageView.swift */,
 				5D0D661C24B5A96C00F2A487 /* listTransitionView.swift */,
+				5DDFA7332553921B00FCF670 /* BackgroundView.swift */,
 				5DDFA70A254BC28C00FCF670 /* EnvironmentObject */,
 				5D69FA0D24C815CF005C16C7 /* BasicList */,
 				5D69FA1224CE5EFE005C16C7 /* connpassList */,
@@ -264,6 +267,7 @@
 				5D0D662124B8095400F2A487 /* listReplacementView.swift in Sources */,
 				5D0D661D24B5A96C00F2A487 /* listTransitionView.swift in Sources */,
 				5D0D660324AEE83F00F2A487 /* ContentView.swift in Sources */,
+				5DDFA7342553921B00FCF670 /* BackgroundView.swift in Sources */,
 				5D69FA1824CE708D005C16C7 /* StudyGroupEventFetcher.swift in Sources */,
 				5D69FA0F24C8171C005C16C7 /* BasicRowView.swift in Sources */,
 				5D69FA1624CE6219005C16C7 /* connpassListView.swift in Sources */,
